@@ -1,6 +1,6 @@
 export const getContributors = async () => {
     const response = await fetch(
-        "https://api.github.com/repos/minorcell/perfedge/contributors",
+        'https://api.github.com/repos/minorcell/perfedge/contributors',
     );
 
     if (!response.ok) {
@@ -8,4 +8,4 @@ export const getContributors = async () => {
     }
     const data = await response.json();
     return data;
-}
+};
