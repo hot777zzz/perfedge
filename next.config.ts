@@ -5,17 +5,17 @@ import { env } from 'process';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  env: {
-    GITHUB_TOKEN: env.GITHUB_TOKEN,
-  }
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    env: {
+        GITHUB_TOKEN: env.GITHUB_TOKEN,
+    },
 };
 
 const withMDX = createMDX({
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
-  },
+    options: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [rehypeHighlight],
+    },
 });
 
 export default withMDX(nextConfig);
